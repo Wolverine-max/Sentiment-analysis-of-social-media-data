@@ -13,6 +13,6 @@ st.sidebar.title('Sentiment analysis of Social Media Data')
 with st.expander('Data'):
   st.write('**Raw data**')
 df=pd.read_csv('https://raw.githubusercontent.com/Wolverine-max/Sentiment-analysis-of-social-media-data/refs/heads/master/Twitter_Data.csv')
-
+df
 st.sidebar.subheader('Tweets Analyser')
 
