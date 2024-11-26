@@ -16,7 +16,7 @@ df1=pd.read_csv('https://raw.githubusercontent.com/Wolverine-max/Sentiment-analy
 df1
 with st.expander('Dataset1'):
   st.write('**Raw data**')
-df2=pd.read_csv
-
-st.sidebar.subheader('Tweets Analyser')
+df2=pd.read_csv('https://raw.githubusercontent.com/Wolverine-max/Sentiment-analysis-of-social-media-data/refs/heads/master/Reddit_Data.csv')
+df2
+st.sidebar.subheader('Data Analyser')
 
