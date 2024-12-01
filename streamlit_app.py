@@ -18,5 +18,8 @@ with st.expander('Reddit Data'):
   st.write('**Raw data**')
   df2=pd.read_csv('https://raw.githubusercontent.com/Wolverine-max/Sentiment-analysis-of-social-media-data/refs/heads/master/Reddit_Data.csv')
   df2
-st.sidebar.subheader('Data Analyser')
+df1.columns=['text','labels']
+df2.columns=['text','labels']
+with st.expander('Data visualization'):
+  
 
