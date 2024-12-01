@@ -19,7 +19,4 @@ with st.expander('Reddit Data'):
   df2=pd.read_csv('https://raw.githubusercontent.com/Wolverine-max/Sentiment-analysis-of-social-media-data/refs/heads/master/Reddit_Data.csv')
   df2
 st.sidebar.subheader('Data Analyser')
-tweets=st.sidebar.radio('Sentiment Type',('positive','negative','neutral'))
-st.write(df1.query('airline_sentiment==@tweets')[['text']].sample(1).iat[0,0])
-st.write(df1.query('airline_sentiment==@tweets')[['text']].sample(1).iat[0,0])
-st.write(df1.query('airline_sentiment==@tweets')[['text']].sample(1).iat[0,0])
+
