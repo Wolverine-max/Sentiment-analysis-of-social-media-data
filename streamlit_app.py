@@ -37,13 +37,3 @@ else:
         fig = px.pie(sentiment, values='Tweets', names='Sentiment')
         st.plotly_chart(fig)
 
-#slider
-st.sidebar.markdown('Time & Location of tweets')
-hr = st.sidebar.slider("Hour of the day", 0, 23)
-df1['Date'] = pd.to_datetime(df1['tweet_created'])
-hr_df1 = df1[df1['Date'].dt.hour == hr]
-if not st.sidebar.checkbox("Hide", True, key='1'):
-    st.markdown("### Location of the tweets based on the hour of the day")
-    st.markdown("%i tweets during  %i:00 and %i:00" % (len(hr_df1), hr, (hr+1)%24))
-    st.map(hr_df1)
-
