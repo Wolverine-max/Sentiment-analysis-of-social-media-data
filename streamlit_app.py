@@ -22,7 +22,7 @@ with st.expander('Reddit Data'):
   st.dataframe(df2)
 with st.expander('Merged Data'):
   st.write("**Merged Data**")
-  merged_df = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
-  st.dataframe(merged_df) 
+  data = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
+  st.dataframe(data) 
   
 
