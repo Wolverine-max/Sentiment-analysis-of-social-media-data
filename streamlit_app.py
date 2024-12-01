@@ -14,12 +14,12 @@ with st.expander('Twitter Data'):
   st.write('**Raw data**')
   df1=pd.read_csv('https://raw.githubusercontent.com/Wolverine-max/Sentiment-analysis-of-social-media-data/refs/heads/master/Twitter_Data.csv')
   df1.columns=['text','labels']
-  df1
+  st.dataframe(df1)
 with st.expander('Reddit Data'):
   st.write('**Raw data**')
   df2=pd.read_csv('https://raw.githubusercontent.com/Wolverine-max/Sentiment-analysis-of-social-media-data/refs/heads/master/Reddit_Data.csv')
   df2.columns=['text','labels']
-  df2
+  st.dataframe(df2)
 
   
 
