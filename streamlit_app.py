@@ -23,17 +23,3 @@ tweets=st.sidebar.radio('Sentiment Type',('positive','negative','neutral'))
 st.write(df1.query('airline_sentiment==@tweets')[['text']].sample(1).iat[0,0])
 st.write(df1.query('airline_sentiment==@tweets')[['text']].sample(1).iat[0,0])
 st.write(df1.query('airline_sentiment==@tweets')[['text']].sample(1).iat[0,0])
-#selectbox + visualisation
-# An optional string to use as the unique key for the widget. If this is omitted, a key will be generated for the widget based on its content.
-## Multiple widgets of the same type may not share the same key.
-select=st.sidebar.selectbox('Visualisation Of Tweets',['Histogram','Pie Chart'],key=1)
-sentiment=df1['Sentiment Analysis'].value_counts()
-sentiment=pd.DataFrame({'Sentiment':sentiment.index,'Tweets':sentiment.values})
-st.markdown("###  Sentiment count")
-if select == "Histogram":
-        fig = px.bar(sentiment, x='Sentiment', y='Tweets', color = 'Tweets', height= 500)
-        st.plotly_chart(fig)
-else:
-        fig = px.pie(sentiment, values='Tweets', names='Sentiment')
-        st.plotly_chart(fig)
-
