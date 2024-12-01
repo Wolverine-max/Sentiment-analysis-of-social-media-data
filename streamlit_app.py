@@ -44,15 +44,6 @@ df1['Date'] = pd.to_datetime(df1['tweet_created'])
 hr_df1 = df1[df1['Date'].dt.hour == hr]
 if not st.sidebar.checkbox("Hide", True, key='1'):
     st.markdown("### Location of the tweets based on the hour of the day")
-    st.markdown("%i tweets during  %i:00 and %i:00" % (len(hr_data), hr, (hr+1)%24))
+    st.markdown("%i tweets during  %i:00 and %i:00" % (len(hr_df1), hr, (hr+1)%24))
     st.map(hr_df1)
-
-#multiselect
-st.sidebar.subheader("Airline tweets by sentiment")
-choice = st.sidebar.multiselect("Airlines", ('US Airways', 'United', 'American', 'Southwest', 'Delta', 'Virgin America'), key = '0')  
-if len(choice)>0:
-    air_df1=df1[df1.airline.isin(choice)]
-    # facet_col = 'airline_sentiment'
-    fig1 = px.histogram(air_df1, x='airline', y='airline_sentiment', histfunc='count', color='airline_sentiment',labels={'airline_sentiment':'tweets'}, height=600, width=800)
-    st.plotly_chart(fig1)
 
