@@ -21,9 +21,8 @@ with st.expander('Reddit Data'):
   df2.columns=['text','labels']
   st.dataframe(df2)
 with st.expander('Merged Data'):
-if not df1.empty and not df2.empty:
-    st.write("**Merged Data**")
-    merged_df = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
-    st.dataframe(merged_df) 
+  st.write("**Merged Data**")
+  merged_df = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
+  st.dataframe(merged_df) 
   
 
