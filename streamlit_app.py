@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 from wordcloud import WordCloud, STOPWORDS  
 from sklearn.feature_extraction.text import TfidfVectorizer
+import pickle
 import numpy as np
 
 
