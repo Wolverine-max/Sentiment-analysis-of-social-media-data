@@ -48,6 +48,7 @@ if st.button('Analyze Sentiment') and input_text:
     st.write(f'Sentiment: {sentiment}')
     if sentiment > 0:
         st.write("Sentiment: Positive")
+        st.markdown(f"#### 😊 **Positive Sentiment**! Well done.")
     elif sentiment < 0:
         st.write("Sentiment: Negative")
     else:
