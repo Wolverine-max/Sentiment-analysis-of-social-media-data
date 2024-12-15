@@ -27,3 +27,28 @@ with st.expander('Merged Data'):
   data = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
   st.dataframe(data) 
   
+model = joblib.load('path_to_saved_model.pkl')  
+vectorizer = joblib.load('path_to_vectorizer.pkl') 
+
+def predict_sentiment(text):
+    text_vector = vectorizer.transform([text])  # Transform the text to the vector
+    sentiment = model.predict(text_vector)[0]  # Predict sentiment
+    return sentiment
+
+st.title('Sentiment Analysis Using Pre-trained Model')
+
+# Text input for analysis
+input_text = st.text_area('Enter the text to analyze sentiment (e.g., tweet or Reddit post):')
+
+# Show results when button is clicked
+if st.button('Analyze Sentiment') and input_text:
+    sentiment = predict_sentiment(input_text)
+    
+    # Display sentiment
+    st.write(f'Sentiment: {sentiment}')
+    if sentiment > 0:
+        st.write("Sentiment: Positive")
+    elif sentiment < 0:
+        st.write("Sentiment: Negative")
+    else:
+        st.write("Sentiment: Neutral")
