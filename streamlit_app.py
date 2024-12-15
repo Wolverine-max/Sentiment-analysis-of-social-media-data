@@ -60,6 +60,7 @@ st.markdown("""
         .stApp {
             background-image: url("https://plus.unsplash.com/premium_photo-1684179641331-e89c6320b6a9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww");
             background-size: cover;
+            background-position: center;
         }
     </style>
 """, unsafe_allow_html=True)
