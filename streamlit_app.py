@@ -45,7 +45,7 @@ if st.button('Analyze Sentiment') and input_text:
     sentiment = predict_sentiment(input_text)
     
     # Display sentiment
-    st.write(f'Sentiment: {sentiment Polarity}')
+    st.write(f'Sentiment: {sentiment score}')
     if sentiment > 0:
         st.write("Sentiment: Positive")
         st.markdown(f"🤩**Positive Sentiment**.")
