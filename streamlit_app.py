@@ -26,8 +26,8 @@ with st.expander('Merged Data'):
   data = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
   st.dataframe(data) 
   
-model = pickle.load('')  
-vectorizer = pickle.load('path_to_vectorizer.pkl') 
+model = pickle.load('logreg.pkl')  
+vectorizer = pickle.load('') 
 
 def predict_sentiment(text):
     text_vector = vectorizer.transform([text])  # Transform the text to the vector
