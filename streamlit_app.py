@@ -53,18 +53,12 @@ if st.button('Analyze Sentiment') and input_text:
     else:
         st.write("Sentiment: Neutral")
 
-st.sidebar.header("How to Use This App")
-st.sidebar.markdown("""
-1. Type a sentence or paragraph in the input field.
-2. Click on **Analyze Sentiment**.
-3. View the predicted sentiment (Positive, Negative, or Neutral) displayed with fun emojis.
-""")
 
 # Background Image (optional)
 st.markdown("""
     <style>
         .stApp {
-            background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
+            background-image: url("https://images.unsplash.com/photo-1620794511798-d7ba5299a087?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww");
             background-size: cover;
         }
     </style>
