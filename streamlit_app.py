@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 from wordcloud import WordCloud, STOPWORDS
+import joblib  
+from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 
 
