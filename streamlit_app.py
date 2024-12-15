@@ -38,7 +38,7 @@ def predict_sentiment(text):
 st.title('Sentiment Analysis Using Pre-trained Model')
 
 # Text input for analysis
-input_text = st.text_area('Enter the text to analyze sentiment ( tweet or Reddit post))
+input_text = st.text_area('Enter the text to analyze sentiment ( tweet or Reddit post)')
 
 # Show results when button is clicked
 if st.button('Analyze Sentiment') and input_text:
