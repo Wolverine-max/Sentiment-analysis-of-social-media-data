@@ -45,22 +45,15 @@ if st.button('Analyze Sentiment') and input_text:
     sentiment = predict_sentiment(input_text)
     
     # Display sentiment
-    st.write(f'Sentiment: {sentiment}')
+    st.write(f'Sentiment: {sentiment Polarity}')
     if sentiment > 0:
         st.write("Sentiment: Positive")
+        st.markdown(f"🤩**Positive Sentiment**.")
     elif sentiment < 0:
         st.write("Sentiment: Negative")
+        st.markdown(f" 😡 **Negative Sentiment**.")
     else:
         st.write("Sentiment: Neutral")
+        st.markdown(f" 😑 **Neutral Sentiment**.")
 
 
-# Background Image (optional)
-st.markdown("""
-    <style>
-        .stApp {
-            background-image: url("https://plus.unsplash.com/premium_photo-1684179641331-e89c6320b6a9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fHNvY2lhbCUyMG1lZGlhfGVufDB8fDB8fHww");
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
-""", unsafe_allow_html=True)
