@@ -48,8 +48,6 @@ if st.button('Analyze Sentiment') and input_text:
     st.write(f'Sentiment: {sentiment}')
     if sentiment > 0:
         st.write("Sentiment: Positive")
-        st.markdown(f"#### 😊 **Positive Sentiment**! Well done.")
-        st.image("https://media.giphy.com/media/3o6ZsYZ4V5cIH2v4bK/giphy.gif", use_column_width=True)
     elif sentiment < 0:
         st.write("Sentiment: Negative")
     else:
