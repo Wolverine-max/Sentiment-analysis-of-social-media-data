@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
-from wordcloud import WordCloud, STOPWORDS
-import joblib  
+from wordcloud import WordCloud, STOPWORDS  
 from sklearn.feature_extraction.text import TfidfVectorizer
 import numpy as np
 
@@ -27,8 +26,8 @@ with st.expander('Merged Data'):
   data = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
   st.dataframe(data) 
   
-model = joblib.load('path_to_saved_model.pkl')  
-vectorizer = joblib.load('path_to_vectorizer.pkl') 
+model = pickle.load('')  
+vectorizer = pickle.load('path_to_vectorizer.pkl') 
 
 def predict_sentiment(text):
     text_vector = vectorizer.transform([text])  # Transform the text to the vector
