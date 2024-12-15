@@ -27,7 +27,7 @@ with st.expander('Merged Data'):
   st.dataframe(data) 
   
 model = pickle.load('logreg.pkl')  
-vectorizer = pickle.load('') 
+vectorizer = pickle.load('tfidf_vectorizer.pkl') 
 
 def predict_sentiment(text):
     text_vector = vectorizer.transform([text])  # Transform the text to the vector
