@@ -24,15 +24,15 @@ with st.expander('Reddit Data'):
   st.dataframe(df2)
 with st.expander('Merged Data'):
   st.write("**Merged Data**")
-  data = pd.concat([df1, df2], ignore_index=True)  # Concatenating the datasets
+  data = pd.concat([df1, df2], ignore_index=True)  
   st.dataframe(data) 
   
 model = pickle.load(open('logreg.pkl','rb')) 
 vectorizer = pickle.load(open('tfidf_vectorizer.pkl','rb')) 
 
 def predict_sentiment(text):
-    text_vector = vectorizer.transform([text])  # Transform the text to the vector
-    sentiment = model.predict(text_vector)[0]  # Predict sentiment
+    text_vector = vectorizer.transform([text]) 
+    sentiment = model.predict(text_vector)[0]  
     return sentiment
 
 st.title('Sentiment Analysis Using Pre-trained Model')
@@ -49,6 +49,7 @@ if st.button('Analyze Sentiment') and input_text:
     if sentiment > 0:
         st.write("Sentiment: Positive")
         st.markdown(f"🤩**Positive Sentiment**.")
+        st.image("https://www.freepik.com/icon/survey_4714563#fromView=keyword&page=1&position=93&uuid=afb9fd55-fdcd-42ba-8b64-5a6df4c3e60a",
     elif sentiment < 0:
         st.write("Sentiment: Negative")
         st.markdown(f" 😡 **Negative Sentiment**.")
