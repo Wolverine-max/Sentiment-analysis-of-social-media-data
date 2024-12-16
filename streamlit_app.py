@@ -27,7 +27,7 @@ with st.expander('Merged Data'):
   data = pd.concat([df1, df2], ignore_index=True)  
   st.dataframe(data) 
   
-model = pickle.load(open('logreg.pkl','rb')) 
+model = pickle.load(open('SVCmodel.pkl','rb')) 
 vectorizer = pickle.load(open('tfidf_vectorizer.pkl','rb')) 
 
 def predict_sentiment(text):
