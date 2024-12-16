@@ -56,8 +56,7 @@ if st.button('Analyze Sentiment') and input_text:
         st.write("Sentiment: Neutral")
         st.markdown(f" 😑 **Neutral Sentiment**.")
       
- st.markdown("""
-        <style>
+ st.markdown(""" <style>
             .stButton>button {
                 background-color: #ff6600;
                 color: white;
