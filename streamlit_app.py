@@ -49,7 +49,7 @@ if st.button('Analyze Sentiment') and input_text:
     if sentiment > 0:
         st.write("Sentiment: Positive")
         st.markdown(f"🤩**Positive Sentiment**.")
-        st.image("https://www.freepik.com/icon/survey_4714563#fromView=keyword&page=1&position=93&uuid=afb9fd55-fdcd-42ba-8b64-5a6df4c3e60a",
+        st.image("https://www.freepik.com/icon/survey_4714563#fromView=keyword&page=1&position=93&uuid=afb9fd55-fdcd-42ba-8b64-5a6df4c3e60a",use_column_width=True)
     elif sentiment < 0:
         st.write("Sentiment: Negative")
         st.markdown(f" 😡 **Negative Sentiment**.")
